@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+// primary
+$Purple: hsl(259, 100%, 65%);
+$Light-red: hsl(0, 100%, 67%);
+
+// Neutral
+$White: hsl(0, 0%, 100%);
+$Off-white: hsl(0, 0%, 94%);
+$Light-grey: hsl(0, 0%, 86%);
+$Smokey-grey: hsl(0, 1%, 44%);
+$Off-black: hsl(0, 0%, 8%);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $Light-grey;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    background-color: $White;
+    margin-inline: 20px;
+    border-radius: 20px 20px 50px 20px;
+    padding: 20px;
+    max-width: 600px;
+}
+
+.card_counter {
+    position: relative;
+    .form-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 5px;
+        padding-bottom: 4em;
+    
+        .form-item {
+            width: 30%;
+            flex-grow: 0;
+            flex-shrink: 1;
+            position: relative;
+    
+            label {
+                font-size: 12px;
+                letter-spacing: 2px;
+                color: $Smokey-grey;
+            }
+    
+            input {
+                width: 100%;
+                padding: 10px;
+                border-radius: 5px;
+                border: 1px solid $Light-grey;
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            p {
+                position: absolute;
+                color: $Light-red;
+                font-size: 7px;
+                bottom: -12px;
+                font-style: italic;
+
+                @media screen and (min-width: 990px) {
+                    font-size: 9px;
+                    bottom: -15px;
+                }
+            }
+        }
+
+        input.error {
+            border-color: $Light-red;
+        }
+
+        @media screen and (min-width: 990px) {
+            width: 70%;
+        }
+    }
+    hr {
+        color: $Off-white;
+    }
+    button {
+        position: absolute;
+        margin: auto;
+        bottom: -25px;
+        left: 0;
+        right: 0;
+        border-radius: 50%;
+        border: none;
+        background-color: $Purple;
+        padding:20px;
+        height: 50px;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        @media screen and (min-width: 990px) {
+            height: 80px;
+            width: 80px;
+            bottom: -40px;
+            margin-inline: auto 0;
+        }
+    }
+}
+
+.result-counter {
+    padding-top: 50px;
+    
+    h2 {
+        font-size: 40px;
+        font-weight: 700;
+        font-style: italic;
+        color: $Off-black;
+
+        @media screen and (min-width: 990px) {
+            font-size: 60px;
+        }
+    }
+    span {
+        color: $Purple;
+    }
+}
+
